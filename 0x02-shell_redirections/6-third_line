@@ -1,0 +1,2 @@
+#!/bin/bash 
+head -n 3 /cd ./iacta | tail -n 1
