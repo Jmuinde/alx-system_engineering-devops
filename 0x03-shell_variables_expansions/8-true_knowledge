@@ -1,0 +1,2 @@
+#!/bin/bash
+let TRUEKNOWLEDGE=1209 | echo $((1209+128))
