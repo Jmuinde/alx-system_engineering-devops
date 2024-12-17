@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Redirection script 
+
+apt-get -y install nginx 
+ufw allow 'Nginx HTTP'
+
+#Override the default index file 
+echo "Hello User" > /var/www/html/index.html
+
+
+# Add a redirect rule for /redirect_me
+sed -i '/server_name _;/a \    rewrite ^/redirect_me$ https://www.youtube.com/watch?v=PeMlggyqz0Y&t=6s permanent;' /etc/nginx/sites-available/default
+
+# Test the NGINX configuration and reload if valid
+nginx -t && service nginx reload
