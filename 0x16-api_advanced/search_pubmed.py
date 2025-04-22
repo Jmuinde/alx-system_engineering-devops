@@ -11,8 +11,8 @@ from Bio import Entrez
 from lxml import etree
 from multiprocessing import Pool, cpu_count
 
-Entrez.email = "jmuindedt@gmail.com"
-Entrez.api_key = "314f9774d7bb236f95add6b7c417cceb3709"
+Entrez.email = ""
+Entrez.api_key = ""
 def search_pmc(term, max_results=0):
 	""" Query the database and return the article ids"""
 	query = f'({term}) AND case reports[Publication Type]'
